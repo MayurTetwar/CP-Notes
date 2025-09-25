@@ -1,0 +1,52 @@
+
+// Always remember //
+IMP :- Always create class array (memo) (ex. Integer[][][] memo)
+IMP2 :- For subset problem , Find all posiible sum(can be made) using boolean array for each number (if possible).
+1. if array is size of 100 then 2d-dp and for loop allow which leads to n^3(Accepted)
+2. if array is size of 1000 then :-
+    a.2d-dp without for loop (means 0-1 napsack) (n^2 Accepted)
+    b.1d-dp with for loop (means 0-1 napsack) (n^2 Accepted)
+    c.2d-dp with for loop (n^3 TLE)
+3. if array is size of greater then 1000 then 1d-dp with for loop (means 0-1 napsack)
+4. see 698 for memoization using string and use this when you can't create dp table
+5. when you fill memo table, Not always use -1 values , First see Constraints then asign 
+   value.
+6. The problem where merging of consecutive elements and form 1 then compute remaining
+    values then , this solved by taking left and right pointer by taking each partition
+    between them.
+    See problem :- 1. 1000. Minimum Cost to Merge Stones
+                   2. 312. Burst Balloons
+
+--------------------------------------------------------------------------------------
+
+// when to use //
+1. Overlapping problem :- ager ek value bar bar compute karna hoga to 
+                          meanes memoization (Recursion for two calls)
+2. To find optimal :- -- 
+
+--------------------------------------------------------------------------------------
+
+// Step to solve //
+1. Find recursion -> memoization -> Top-down approche
+2. To find base case -> think about the smallest valid input
+3. To make memo array that save values ->
+    in recurrence relations, genraly the 2 values which are changing that are row
+    ans column in memo
+    Ex., f(arr,x,n)=f(arr,x-1,n-1)+f(arr,x,n-1);
+    then make memo of int[][] memo=new int[n][x];
+    
+--------------------------------------------------------------------------------------
+
+// Types of problems //
+1. 0-1 knapsack problem
+-> 3 types :- 1. Fractional knapsack -> add values in bag and also use half values(like 0.5)
+              2. 0-1 knapsack -> take (1) or not (0) as full not take half
+              3. unbounded knapsack -> no limit for multiple same value
+-> 0-1 knapsack is imp for dynamic Programing
+
+--------------------------------------------------------------------------------------
+
+
+
+
+                    

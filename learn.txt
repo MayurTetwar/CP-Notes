@@ -1,0 +1,72 @@
+// IMP //
+135. Candy
+1524. Number of Sub-arrays With Odd Sum
+918. Maximum Sum Circular Subarray
+115. Distinct Subsequences
+698. Partition to K Equal Sum Subsets
+718. Maximum Length of Repeated Subarray
+486. Predict the Winner
+2398. Maximum Number of Robots Within Budget
+207. Course Schedule
+1239. Maximum Length of a Concatenated String with Unique Characters
+
+
+--------------------------------------------------------------------------------------
+
+// Do this //
+354. Russian Doll Envelopes
+975. Maximum Square Area by Removing Fences From a Field
+
+--------------------------------------------------------------------------------------
+
+int MOD = (int) Math.pow(10, 9) + 7;
+int MOD = 1_000_000_007;
+
+--------------------------------------------------------------------------------------
+
+Jab two number in array ka sum ya mainus kisi
+k ya limit ke eqal like question aaye to 
+HashMap ya Sorting use karna
+
+--------------------------------------------------------------------------------------
+
+If to be find answer in given range(like lower and upper)
+then find value for 0 to upper and value for 0 to lower
+then ans = upper(value)-lower(value)
+// Easy To find ,But not always optimised
+
+--------------------------------------------------------------------------------------
+
+To get maximum number in array=>
+Arrays.stream(arr).max().getAsInt();
+
+--------------------------------------------------------------------------------------
+
+1201 Problem
+n(AUBUC) = n(A)+n(B)+n(C)-n(A∩B)-n(A∩C)-n(B∩C)+n(A∩B∩C)
+
+--------------------------------------------------------------------------------------
+
+3355 and 1109
+differce array problem 
+    for(int a[]:que){
+        ans[a[0]]-=1;
+        if((a[1]+1)<n){
+            ans[a[1]+1]+=1;
+        }
+    }
+    for(int i=1;i<n;i++){
+        ans[i]+=ans[i-1];
+    }
+
+--------------------------------------------------------------------------------------
+
+If series of numbers have and(&) is zero then there all number or(|) is let (num) then we can remove 
+number which is in series by num^(x) where x is that number to remove
+see 2401 on leetcode
+
+--------------------------------------------------------------------------------------
+
+
+
+

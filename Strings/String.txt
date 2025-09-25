@@ -1,0 +1,25 @@
+
+/* Important String Algorithm */
+
+| **Algorithm**                | **Time Complexity**                       | **Use Case**                                                                                        |
+| ---------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **KMP (Knuth–Morris–Pratt)** | `O(n + m)`                                | Find all occurrences of a pattern in a string. Also used for computing borders, string periodicity. |
+| **Z-Algorithm**              | `O(n + m)`                                | Pattern matching, prefix comparisons, finding repetitions, string overlaps.                         |
+| **Rabin–Karp (Hashing)**     | `O(n + m)` expected (with rolling hash)   | Fast substring matching, multiple pattern matching, substring comparison with prefix hashes.        |
+| **Aho–Corasick**             | `O(n + totalPatternLen + output)`         | Multi-pattern search in a single pass (dictionary matching, spam filter, etc.).                     |
+| **Suffix Array + LCP**       | `O(n log n)` build, `O(1)` query with RMQ | Lexicographic order of substrings, longest repeated substring, suffix-based queries.                |
+| **Suffix Automaton (SAM)**   | `O(n)`                                    | Count distinct substrings, longest common substring, substring queries, compact suffix structure.   |
+| **Manacher’s Algorithm**     | `O(n)`                                    | Longest palindromic substring in linear time.                                                       |
+| **Booth’s Algorithm**        | `O(n)`                                    | Lexicographically smallest rotation of a string.                                                    |
+
+
+
+
+
+
+
+
+
+
+
+

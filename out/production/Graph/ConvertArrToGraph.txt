@@ -1,0 +1,36 @@
+
+    // public static List<List<Pair>> convertGridToGraph(int[][] grid) {
+    //     int rows = grid.length;
+    //     int cols = grid[0].length;
+    //     int totalNodes = rows * cols;
+
+    //     // Initialize adjacency list
+    //     List<List<Pair>> graph = new ArrayList<>();
+    //     for (int i = 0; i < totalNodes; i++) {
+    //         graph.add(new ArrayList<>());
+    //     }
+
+    //     // Directions for adjacency (up, down, left, right)
+    //     int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+    //     // Build the graph
+    //     for (int i = 0; i < rows; i++) {
+    //         for (int j = 0; j < cols; j++) {
+    //             int currentNode = i * cols + j;
+
+    //             // Check each direction
+    //             for (int[] dir : directions) {
+    //                 int newRow = i + dir[0];
+    //                 int newCol = j + dir[1];
+
+    //                 // Ensure the neighbor is within bounds
+    //                 if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols) {
+    //                     int neighborNode = newRow * cols + newCol;
+    //                     int cost = grid[newRow][newCol];
+    //                     graph.get(currentNode).add(new Pair(neighborNode, cost));
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     return graph;
+    // }
