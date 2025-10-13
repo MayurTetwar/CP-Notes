@@ -16,6 +16,18 @@ public class StringProblem {
       }
       return true;
     }
+    public static String rev(String s){
+        char[] ch=s.toCharArray();
+        int i=0,j=s.length()-1;
+        while(i<j){
+            char temp=ch[i];
+            ch[i]=ch[j];
+            ch[j]=temp;
+            i++;
+            j--;
+        }
+        return new String(ch);
+    }
     static String removeAllconcicativeChar(String s){
          String ans="";
 
@@ -43,13 +55,11 @@ public class StringProblem {
       boolean ans=isPalindrome(s);
       if(ans){
         System.out.println("String is palindrome!");
-        return;
       }else{
         System.out.println("String is not palindrome!");
-        return;
       }
       
-    //  String ans=removeAllconcicativeChar(s);
-    //  System.out.println(ans);
+     String str=removeAllconcicativeChar(s);
+     System.out.println(str);
     }
 }

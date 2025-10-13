@@ -1,4 +1,4 @@
-
+package DynamicPrograming;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ public class StringEditing {
 
     public static void main(String[] args) {
         
-        System.out.println(minDistance("Payal", "Mayur"));
+        System.out.println(minDistance("Nishtha", "Mayur"));
         System.out.println(editDistance("Somya", "Mayur"));
 
     }

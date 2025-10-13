@@ -13,6 +13,10 @@
 | **Booth’s Algorithm**        | `O(n)`                                    | Lexicographically smallest rotation of a string.                                                    |
 
 
+1. KMP (DONE) ~
+2. Z-Algorithm (DONE) ⭐ (Best for prefix and suffix comparision)
+3. 
+
 
 
 

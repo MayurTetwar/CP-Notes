@@ -17,6 +17,93 @@
 354. Russian Doll Envelopes
 975. Maximum Square Area by Removing Fences From a Field
 
+-------------------------------------------------------------------------------------
+
+/**************  Mini Practice Set: Breaking the Div2 C Barrier  *******************/
+
+Pattern 1: Greedy Algorithms
+The most common pattern. You must learn to trust the simplest choice. The core idea is to make the locally 
+optimal choice at each step, hoping it leads to a global optimum. Your intuition must tell you when this 
+works.
+Problem 1: Boats Competition (Codeforces 1399C)
+Link: https://codeforces.com/problemset/problem/1399/C
+The Core Idea: A direct greedy choice on which people to pair is difficult. The trick is to reframe the 
+problem. What if you fixed the target weight s for all pairs?
+Tourist's Hint: The constraints on weights are very small (w_i <= n). This is a huge clue. The total weight 
+of a pair, s, cannot be very large. Instead of trying to find pairs, try to fix a target weight s and see 
+how many pairs you can form for that specific s. Then find the best s. How can you count the pairs for a 
+fixed s efficiently? Think about sorting and two pointers.
+
+Pattern 2: Binary Search on the Answer
+This pattern is a competitive programming superpower. If a problem asks you to find the "minimum possible 
+maximum value" or "maximum possible minimum value," your brain should scream "BINARY SEARCH!"
+Problem 2: Cellular Network (Codeforces 702C)
+Link: https://codeforces.com/problemset/problem/702/C
+The Core Idea: Find the minimum radius r such that all cities are covered by a cellular tower.
+Tourist's Hint: This is the absolute classic "binary search on the answer" problem. Don't try to calculate 
+r directly. Instead, write a function check(r) that returns true or false: "Is it possible to cover all 
+cities if all towers have a radius of r?". If you can do this, you can binary search for the smallest r 
+that works. The check(r) function itself can be implemented efficiently with a greedy approach or two 
+pointers.
+
+Pattern 3: Data Structures (Maps and Sets)
+Sometimes the logic is simple, but you get Time Limit Exceeded because you're searching inefficiently. 
+std::map (or unordered_map) and std::set are your tools for O(log N) or O(1) lookups.
+Problem 3: Registration System (Codeforces 4C)
+Link: https://codeforces.com/problemset/problem/4/C
+The Core Idea: Handle a stream of username requests. If a name exists, append a number.
+Tourist's Hint: The server must "remember" every username it has seen and how many times it has seen it. 
+What is the most efficient way to store and retrieve this kind of string -> integer information? This 
+problem is a direct test of whether you know your basic hash map.
+
+Pattern 4: Constructive Algorithms & Number Theory
+These problems ask you to build a solution that meets certain criteria. Often, the solution relies on a 
+simple mathematical property (like parity - even/odd) or a clever observation.
+Problem 4: Product of Three Numbers (Codeforces 1294C)
+Link: https://codeforces.com/problemset/problem/1294/C
+The Core Idea: Find three distinct integers a, b, c whose product is n.
+Tourist's Hint: Don't try to be too clever. Find the first smallest divisor a. Then, what are you left 
+with? A new number n' = n/a. Now you just need to find two distinct divisors b and c for n'. How do you 
+do that? Iterate and find the first divisor b. Check if the remaining c is valid. The key is to be 
+systematic and handle the distinctness constraint.
+
+Pattern 5: Two Pointers / Sliding Window
+This is an essential technique for array/string problems to avoid O(N^2) complexity. It involves 
+maintaining two pointers (left and right) to define a "window" or subarray and moving them intelligently.
+Problem 5: Books (Codeforces 279B)
+Link: https://codeforces.com/problemset/problem/279/B
+The Core Idea: Find the maximum number of books you can read given a total time limit, where books 
+must be read consecutively.
+Tourist's Hint: This is the canonical sliding window problem. Imagine a window representing the 
+books you are currently reading. Keep expanding the window by moving the right pointer (reading 
+one more book). If the total time exceeds the limit, you must shrink the window. How do you shrink 
+it? By moving the left pointer forward (dropping the first book you read). Keep track of the maximum 
+window size you see.
+Your Training Regimen
+Attempt: Pick a problem. Give yourself a strict 45-minute timer. Try to solve it completely.
+Hint: If you are stuck after 45 minutes, read my hint. Try for another 20 minutes.
+Surrender: If you are still stuck, read the editorial or watch a tutorial. Do not just copy the code.
+Understand: Read the code from a top-rated competitor. Understand every single line. Why did they use 
+that data structure? What is the logic? Why is it efficient?
+Re-implement: Close everything. Open a blank editor and implement the solution from scratch, from your 
+own understanding.
+Repeat: Do this for all five problems. Then, find more problems with the same tags on Codeforces.
+This is not about luck. It is about recognizing patterns. After this practice, when you see a Div2 C, 
+you won't see a random problem. You will ask: "Is it greedy? Can I binary search the answer? Do I need 
+a map? Is it constructive? Can I use two pointers?"
+
+You will have an arsenal. Now, go build it.
+
+-------------------------------------------------------------------------------------
+
+/* STACK LIMIT*/
+Maximum Depth Of recursive stack in java is 19500~.
+
+-------------------------------------------------------------------------------------
+
+// Use follwing if you required to substruct values from long with mod.
+rem = (rem - dp[neg] + mod) % mod
+
 --------------------------------------------------------------------------------------
 
 int MOD = (int) Math.pow(10, 9) + 7;

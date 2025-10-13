@@ -17,7 +17,7 @@ public class Example {
 
         HashMap<Integer,Integer> map=new HashMap<>();
         TreeMap<Integer,Integer> tm=new TreeMap<>();
-        String str="May.uryu";
+        String str="Mayur";
         Stack<Integer> stk=new Stack<>();
         Queue<Integer> q=new LinkedList<>();
         Deque<Integer> dq=new LinkedList<>();
@@ -28,8 +28,10 @@ public class Example {
         PriorityQueue<Integer> pq=new PriorityQueue<>(Comparator.reverseOrder());
         int[] arr=new int[10];
         char ch='a';
+        BitSet bs = new BitSet(10); 
         
-    
+        
+
     }
 }
 

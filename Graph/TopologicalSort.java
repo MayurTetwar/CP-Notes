@@ -6,67 +6,44 @@ import java.util.*;
 
 class TopologicalSort {
 
-    // Function to perform DFS and topological sorting
-    static void topologicalSortUtil(int v,
-            ArrayList<ArrayList<Integer>> adj,
-            boolean[] visited, Stack<Integer> st) {
-
-        // Mark the current node as visited
-        visited[v] = true;
-
-        // Recur for all adjacent vertices
-        for (int i : adj.get(v)) {
-            if (!visited[i]) {
-                topologicalSortUtil(i, adj, visited, st);
-            }
-        }
-
-        // Push current vertex to stack
-        // which stores the result
-        st.push(v);
-    }
-
-    // Function to perform Topological Sort
-    static ArrayList<Integer> topologicalSort(
-            ArrayList<ArrayList<Integer>> adj) {
-        int V = adj.size();
-
-        // Stack to store the result
-        Stack<Integer> st = new Stack<>();
-        boolean[] visited = new boolean[V];
-
-        // Call the recursive helper function to store
-        // Topological Sort starting from all vertices one by one
+    // Function to return list containing vertices in Topological order.
+    static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
+        int indegree[] = new int[V];
         for (int i = 0; i < V; i++) {
-            if (!visited[i]) {
-                topologicalSortUtil(i, adj, visited, st);
+            for (int it : adj.get(i)) {
+                indegree[it]++;
             }
         }
 
-        ArrayList<Integer> ans = new ArrayList<>();
-
-        // Append contents of stack
-        while (!st.isEmpty()) {
-            ans.add(st.pop());
+        Queue<Integer> q = new LinkedList<>();
+        
+        for (int i = 0; i < V; i++) {
+            if (indegree[i] == 0) {
+                q.add(i);
+            }
         }
 
-        return ans;
+        int topo[] = new int[V];
+        int i = 0;
+        while (!q.isEmpty()) {
+            int node = q.peek();
+            q.remove();
+            topo[i++] = node;
+            // node is in your topo sort
+            // so please remove it from the indegree
+
+            for (int it : adj.get(node)) {
+                indegree[it]--;
+                if (indegree[it] == 0) {
+                    q.add(it);
+                }
+            }
+        }
+
+        return topo;
     }
-
     public static void main(String[] args) {
-
-        // Graph represented as an adjacency list
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        adj.add(new ArrayList<>(List.of(1)));
-        adj.add(new ArrayList<>(List.of(2)));
-        adj.add(new ArrayList<>());
-        adj.add(new ArrayList<>(List.of(1, 2)));
-
-        ArrayList<Integer> ans = topologicalSort(adj);
-
-        for (int node : ans) {
-            System.out.print(node + " ");
-        }
-        System.out.println();
+        
+        
     }
 }

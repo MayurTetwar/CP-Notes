@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
  
- 
 public class Main {
     static int intmax=Integer.MAX_VALUE;
     static int intmin=Integer.MIN_VALUE;
@@ -14,36 +13,23 @@ public class Main {
     // 2) CHECK FOR LONG 
     public static void solve(MyScanner sc){
         int n=sc.nextInt();
-        List<List<Integer>> list=new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
-            list.add(new ArrayList<>());
-        }
-        for(int i=0;i<n-1;i++){
-            int u=sc.nextInt();
-            int v=sc.nextInt();
-            list.get(u).add(v);
-            list.get(v).add(u);
-        }
-        if(n==2){
-            print("NO");
-            return;
-        }
         
+
+        // print("------------------------");
     }
- 
     public static void brute(MyScanner sc){
         int n=sc.nextInt();
-       
+        // print("------------------------");
     }
- 
     public static void main(String[] args) throws java.lang.Exception {
+
         MyScanner sc = new MyScanner();
  
         int test = sc.nextInt();
         while (test-->0) {
             solve(sc);
         }
-
+       
         // solve(sc);
 
         /* --- Bruteforce Testing --- */
@@ -128,6 +114,9 @@ public class Main {
         arr[i]=arr[j];
         arr[j]=temp;
     }
+    public static boolean isSqr(long val) {
+        return ((double)Math.sqrt(val)) == ((long)Math.sqrt(val));
+    }
     public static void print(Object... values) {for (Object value : values)out.print(value + " ");
         out.println();}
     public static void print(char val){out.println(val);}
@@ -135,21 +124,29 @@ public class Main {
     public static void print(int val){out.println(val);}
     public static void print(String val){out.println(val);}
     public static void print(StringBuilder sb){out.println(sb);}
+    public static void print(Long[] arr){for(Long num:arr){out.print(num);out.print(" ");}
+        out.println();} 
     public static void print(int[] arr){for(int num:arr){out.print(num);out.print(" ");}
         out.println();}
     public static void print(long[] arr){for(long num:arr){out.print(num);out.print(" ");}
         out.println();}
+    public static void print(int[][] arr){for(int[] A:arr){for(int num:A)out.print(num+" ");
+        out.println();}}
+    public static void print(long[][] arr){for(long[] A:arr){for(long num:A)out.print(num+" ");
+        out.println();}}
+    public static void print(char[][] arr){for(char[] A:arr){for(char num:A)out.print(num+" ");
+        out.println();}}
     public static <T> void print(List<T> list){for(Object num:list){out.print(num);out.print(" ");}
         out.println();}
     public static <T> void print(PriorityQueue<T> pq) {PriorityQueue<T> copy = new PriorityQueue<>(pq);  
         out.print("PQ => ");while (!copy.isEmpty()) {out.print(copy.poll());out.print(" ");}
         out.println();}
-    public static <T> void print(Queue<T> queue){out.print("Queue=> ");for(Object num:queue){
+    public static <T> void print(Queue<T> queue){for(Object num:queue){
         out.print(num);out.print(" ");}out.println();}
     public static <K, V> void print(HashMap<K, V> map) {
         for (Map.Entry<K, V> entry : map.entrySet())
             out.println("  " + entry.getKey() + " => " + entry.getValue());}
-    public static <T> void print(HashSet<T> set){out.print("Set=> ");for(Object num:set){
+    public static <T> void print(HashSet<T> set){for(Object num:set){
         out.print(num);out.print(" ");}out.println();}
  
     // -------------- Required Classes -------------------------------------//
@@ -180,13 +177,6 @@ public class Main {
             }
             return st.nextToken();
         }
-        int[] nextArray(int n){
-            int[] arr=new int[n];
-            for (int i = 0; i < n; i++) {
-                arr[i]=this.nextInt();
-            }
-            return arr;
-        }
         int nextInt() {return Integer.parseInt(next());}
         long nextLong() {return Long.parseLong(next());}
         double nextDouble() {return Double.parseDouble(next());}
@@ -199,10 +189,31 @@ public class Main {
             }
             return str;
         }
+        int[] nextArray(int n){
+            int[] arr=new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i]=this.nextInt();
+            }
+            return arr;
+        }
+        long[] nextArrayL(int n){
+            long[] arr=new long[n];
+            for (int i = 0; i < n; i++) {
+                arr[i]=this.nextLong();
+            }
+            return arr;
+        }
+        char[] nextArrayC(int n){
+            return nextLine().toCharArray();
+        }
+        int[][] nextArray2d(int n,int m){
+            int[][] arr=new int[n][m];
+            for (int i = 0; i < n; i++) {
+                for(int j=0;j<m;j++){
+                    arr[i][j]=this.nextInt();
+                }
+            }
+            return arr;
+        }
     }
-    // --------------------------------------------------------------------//
 }
-
-/*
-
- */

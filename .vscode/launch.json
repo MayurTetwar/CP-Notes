@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "B",
+            "request": "launch",
+            "mainClass": "B",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Main2",
+            "request": "launch",
+            "mainClass": "Main2",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Codevita",
+            "request": "launch",
+            "mainClass": "Codevita",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "StringEditing",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.StringEditing",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_AllOdd",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP_AllOdd",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_OddDigitOnly",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP_OddDigitOnly",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_Sum",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP_Sum",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_ZeroCount",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP_ZeroCount",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "RecursionDepthTest",
+            "request": "launch",
+            "mainClass": "RecursionDepthTest",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "ZAlgorithm",
+            "request": "launch",
+            "mainClass": "Strings.ZAlgorithm",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "Example",
             "request": "launch",
             "mainClass": "Example",
