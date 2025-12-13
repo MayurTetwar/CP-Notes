@@ -71,4 +71,10 @@ public class Tricks {
     If you just want to test if the bit is set → use num & (1 << i) and check if it’s != 0.
     (Best for boolean conditions.)
      */
+
+    // 12. AND trick
+    /*
+    let a b are 2 numbers
+    if a&b == 0 then a^b = a+b
+    */
 }

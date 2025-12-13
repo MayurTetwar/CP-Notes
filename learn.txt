@@ -9,13 +9,25 @@
 2398. Maximum Number of Robots Within Budget
 207. Course Schedule
 1239. Maximum Length of a Concatenated String with Unique Characters
+357. Count Numbers with Unique Digits
+3381. Maximum Subarray Sum With Length Divisible by K
+2940. Find Building Where Alice and Bob Can Meet
 
 
---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 
-// Do this //
-354. Russian Doll Envelopes
-975. Maximum Square Area by Removing Fences From a Field
+// Time Complexity Guide by 'n' Value
+
+Constraint (Max n)  Required Worst-Case Complexity
+n ≤ 10-20           O(n!) or O(2^n)
+n ≤ 80-100          O(n^4) or O(n^3)
+n ≤ 500             O(n^3)
+n ≤ 5,000           O(n^2)
+n ≤ 50,000          O(n.sqrt(n)​)
+n ≤ (10⁵ ~ 10⁶)     O(nlogn) or O(n)
+n ≤ 10⁸             O(n)
+n ≤ 10⁹             O(logn) or O(n​)
+n ≤ 10¹⁸            O(logn) or O(1)
 
 -------------------------------------------------------------------------------------
 
@@ -91,8 +103,15 @@ Repeat: Do this for all five problems. Then, find more problems with the same ta
 This is not about luck. It is about recognizing patterns. After this practice, when you see a Div2 C, 
 you won't see a random problem. You will ask: "Is it greedy? Can I binary search the answer? Do I need 
 a map? Is it constructive? Can I use two pointers?"
-
+ 
 You will have an arsenal. Now, go build it.
+
+-------------------------------------------------------------------------------------
+
+/* To Find Diameter of tree */ 
+1. Start traversing the tree from any starting point and get farthest point (say a).
+2. Now, Aagin start traversing from a to farthest point(say b) and calculate distance.
+3. This is distance is Diameter or longest path in tree.
 
 -------------------------------------------------------------------------------------
 
@@ -101,22 +120,34 @@ Maximum Depth Of recursive stack in java is 19500~.
 
 -------------------------------------------------------------------------------------
 
-// Use follwing if you required to substruct values from long with mod.
+/* Use follwing if you required to substruct values from long with mod. */
 rem = (rem - dp[neg] + mod) % mod
 
 --------------------------------------------------------------------------------------
 
-int MOD = (int) Math.pow(10, 9) + 7;
-int MOD = 1_000_000_007;
+/* Which Tree is Used ?? */
+👉 Use Segment Tree for basic range operations (sum/min/max/update).
+👉 Use Merge Sort Tree when the question involves sorted order inside the range.
+👉 Use to  Answers queries about order in the entire dataset (or dynamic data).
+
+| Type                            | Data Structure           | Example Problem                  |
+| ------------------------------- | ------------------------ | -------------------------------- |
+| k-th smallest / median          | Merge Sort Tree / OST ST | CSES K-th Number, Median Queries |
+| Frequency / occurrence          | Merge Sort Tree          | Count X in range                 |
+| Remove pᵢ-th element            | OST ST                   | Josephus Queries                 |
+| Sum ≤ X / sum > X               | Merge Sort Tree          | Happiness / Range Sum queries    |
+| Rank of element                 | Merge Sort Tree / OST ST | Number of elements ≤ X in [L,R]  |
+| Absolute difference from median | Merge Sort Tree          | Sum of abs(A[i]-median) in range |
 
 --------------------------------------------------------------------------------------
-
+/* Intution 1 */
 Jab two number in array ka sum ya mainus kisi
 k ya limit ke eqal like question aaye to 
 HashMap ya Sorting use karna
 
 --------------------------------------------------------------------------------------
 
+/* Get ans within range */
 If to be find answer in given range(like lower and upper)
 then find value for 0 to upper and value for 0 to lower
 then ans = upper(value)-lower(value)
@@ -124,36 +155,64 @@ then ans = upper(value)-lower(value)
 
 --------------------------------------------------------------------------------------
 
-To get maximum number in array=>
-Arrays.stream(arr).max().getAsInt();
-
---------------------------------------------------------------------------------------
-
-1201 Problem
-n(AUBUC) = n(A)+n(B)+n(C)-n(A∩B)-n(A∩C)-n(B∩C)+n(A∩B∩C)
-
---------------------------------------------------------------------------------------
-
-3355 and 1109
-differce array problem 
-    for(int a[]:que){
-        ans[a[0]]-=1;
-        if((a[1]+1)<n){
-            ans[a[1]+1]+=1;
-        }
-    }
-    for(int i=1;i<n;i++){
-        ans[i]+=ans[i-1];
-    }
-
---------------------------------------------------------------------------------------
-
+/* Intution 2 */
 If series of numbers have and(&) is zero then there all number or(|) is let (num) then we can remove 
 number which is in series by num^(x) where x is that number to remove
 see 2401 on leetcode
 
 --------------------------------------------------------------------------------------
 
-
+/*
+Question :- 
+https://codeforces.com/contest/2176/problem/D
+Code:-
+public static void dfs(int node,boolean[] visi,long[] res,long[] arr,long addthis){
+        long ans=0;
+        visi[node]=true;
+        for(int ch:list.get(node)){
+            map[ch].put(addthis,map[ch].getOrDefault(addthis, 0)+1);
+            if(map[node].containsKey(arr[ch]-arr[node])){
+                ans+=map[node].get(arr[ch]-arr[node]);
+                dfs(ch,visi,res,arr,arr[ch]);
+            }
+        }
+        res[node]=ans;
+    }
+    static HashMap<Long,Integer>[] map;
+    static List<List<Integer>> list;
+    public static void solve(MyScanner sc){
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        long[] arr=sc.nextArrayL(n);
+        list=new ArrayList<>();
+        map=new HashMap[n];
+        boolean[] visi=new boolean[n];
+        long[] res=new long[n];
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->{
+            return Long.compare(arr[a], arr[b]);
+        });
+        for(int i=0;i<n;i++){
+            pq.add(i);
+            list.add(new ArrayList<>());
+            map[i]=new HashMap<>();
+        }
+        for(int i=0;i<m;i++){
+            int v=sc.nextInt()-1;
+            int u=sc.nextInt()-1;
+            list.get(v).add(u);
+            map[u].put(arr[v],map[u].getOrDefault(arr[v], 0)+1);
+        }
+        while(!pq.isEmpty()){
+            int i=pq.poll();
+            if(!visi[i]){
+                dfs(i,visi,res,arr,-1);
+            }
+        }
+        long ans=0;
+        print(res);
+        for(long num:res)ans+=num;
+        print(ans+m);
+    }
+*/
 
 

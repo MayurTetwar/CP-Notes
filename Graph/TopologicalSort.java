@@ -14,15 +14,12 @@ class TopologicalSort {
                 indegree[it]++;
             }
         }
-
         Queue<Integer> q = new LinkedList<>();
-        
         for (int i = 0; i < V; i++) {
             if (indegree[i] == 0) {
                 q.add(i);
             }
         }
-
         int topo[] = new int[V];
         int i = 0;
         while (!q.isEmpty()) {
@@ -31,7 +28,6 @@ class TopologicalSort {
             topo[i++] = node;
             // node is in your topo sort
             // so please remove it from the indegree
-
             for (int it : adj.get(node)) {
                 indegree[it]--;
                 if (indegree[it] == 0) {
@@ -39,7 +35,6 @@ class TopologicalSort {
                 }
             }
         }
-
         return topo;
     }
     public static void main(String[] args) {

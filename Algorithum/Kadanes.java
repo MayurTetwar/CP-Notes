@@ -2,20 +2,21 @@ package Algorithum;
 class Kadnes{
     public static void main(String[] args) {
         
-
+        System.out.println(maxSubArray(new int[]{3,2,-9,8}));
     }
-    class Solution {
-        public int maxSubArray(int[] arr) {
+    public static int maxSubArray(int[] arr) {
             int curr=0;
             int max=Integer.MIN_VALUE;
             int n=arr.length;
-    
             for(int i=0;i<n;i++){
                 curr+=arr[i];
                 max=Math.max(max,curr);
-                curr=Math.max(curr,0);
+                if(curr<0){
+                    curr=0;
+                    System.out.println("Yes");
+                }
+                System.out.println(max);
             }
             return max;
         }
-    }
 }

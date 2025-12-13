@@ -29,11 +29,9 @@ public class Example {
         int[] arr=new int[10];
         char ch='a';
         BitSet bs = new BitSet(10); 
+         
         
         
-
+        
     }
 }
-
-
-

@@ -7,16 +7,17 @@ public class Main {
     static long longmin=Long.MIN_VALUE;
     static long longmax=Long.MAX_VALUE;
     static int[]spf;
- 
+
     // Writing your solution here. -------------------------------------
     // 1) FIRST READ QUESTION PROPERLY 2 TIMES
-    // 2) CHECK FOR LONG 
+    // 2) CHECK FOR LONG
     public static void solve(MyScanner sc){
         int n=sc.nextInt();
         
 
         // print("------------------------");
     }
+
     public static void brute(MyScanner sc){
         int n=sc.nextInt();
         // print("------------------------");
@@ -49,6 +50,9 @@ public class Main {
         }
         return true;
     }
+    public static boolean valid(int n,int m,int i,int j){
+        return !(i<0 || j<0 || i>=n || j>=m);
+    }
     public static long lcm(long a, long b) {
         return a * b / gcd(a, b);
     }
@@ -67,6 +71,7 @@ public class Main {
         }
         return list;
     }
+    // Use when multiple times requirements of Prime factors (nlogn)
     public static void buildSPF(int MAX) {
         spf=new int[MAX+1];
         for (int i = 2; i <= MAX; i++) spf[i] = i;
@@ -87,6 +92,18 @@ public class Main {
             // while(num % p == 0) num/=p;  // Unique prime number
         }
         return factors;
+    }
+    // Use when only single number prime numbers requied (sqrt(n) up to 10^9)
+    public static List<Integer> getPrimeFactorsSingleNumber(int n){
+        List<Integer> fact=new ArrayList<>();
+        for(int i=2;i*i<=n;i++){
+            while(n%i==0){
+                fact.add(i);
+                n/=i;
+            }
+        }
+        if(n>1)fact.add(n);
+        return fact;
     }
     public static long powerMod(long base, long exponent, long mod) {
         long result = 1;

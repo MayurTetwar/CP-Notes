@@ -1,4 +1,4 @@
-package DynamicPrograming;
+package DynamicPrograming.DigitDP;
 
 import java.util.*;
 

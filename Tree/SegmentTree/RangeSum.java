@@ -1,10 +1,10 @@
-package SegmentTree;
+package Tree.SegmentTree;
 
-public class RSQ {
+public class RangeSum {
     private static long[] tree;
     private static int n;
 
-    public RSQ(int[] arr) {
+    public RangeSum(int[] arr) {
         n = arr.length;
         tree = new long[4 * n];
         build(arr, 1, 0, n - 1);
@@ -20,7 +20,22 @@ public class RSQ {
             tree[node] = tree[2 * node] + tree[2 * node + 1];
         }
     }
-
+    /*
+    build(arr, 1, 0, n - 1);
+    1. node = 1 → root of the tree
+    2. 0, n-1 → the root represents full range of the array
+    */
+    /*
+    Case A: Leaf node
+        When start == end → the range has only 1 element
+        Example:
+        range = [3,3] → this covers element arr[3]
+    Case B: Internal node
+        Split range into two halves
+        Build left child
+        Build right child
+        Node value = sum of both children
+    */
     public long query(int L, int R) {
         return query(1, 0, n - 1, L, R);
     }
@@ -55,15 +70,29 @@ public class RSQ {
             tree[node] = tree[2 * node] + tree[2 * node + 1];
         }
     }
+    /*
+    To update arr[idx] = val:
+        1. Go down the tree to the leaf node representing idx
+        2. Update its value
+        3. On the way back up, recalc parent nodes as sum of children
+    */
 
     // Example usage
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7, 9, 11};
-        RSQ st = new RSQ(arr);
+        RangeSum st = new RangeSum(arr);
 
         System.out.println(st.query(1, 3)); // sum from index 1 to 3
         st.update(1, 10);               // update arr[1] = 10
         System.out.println(st.query(1, 3)); // sum from index 1 to 3 after update
-        
     }
+    /*
+                         (0,5)=36
+                        /        \
+                 (0,2)=9          (3,5)=27
+                /      \           /      \
+          (0,1)=4     (2,2)=5   (3,4)=16  (5,5)=11
+         /      \               /      \
+    (0,0)=1     (1,1)=3      (3,3)=7   (4,4)=9
+    */
 }

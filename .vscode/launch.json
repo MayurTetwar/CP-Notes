@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "Practice",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "MergeSortTree",
+            "request": "launch",
+            "mainClass": "Tree.SegmentTree.MergeSortTree",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "FastMedianAbs",
+            "request": "launch",
+            "mainClass": "Tree.SegmentTree.FastMedianAbs",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Kadnes",
+            "request": "launch",
+            "mainClass": "Algorithum.Kadnes",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "SumOfDigits",
+            "request": "launch",
+            "mainClass": "Concepts.SumOfDigits",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Codechef",
+            "request": "launch",
+            "mainClass": "Codechef",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_Palindrome",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP.DigitDP_Palindrome",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_UniqueDigitNumCnt",
+            "request": "launch",
+            "mainClass": "DigitDP_UniqueDigitNumCnt",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_Palindrome",
+            "request": "launch",
+            "mainClass": "DigitDP_Palindrome",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_UniqueDigitNumCnt",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP.DigitDP_UniqueDigitNumCnt",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_AllOdd",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP.DigitDP_AllOdd",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "DigitDP_DigitSumMod3",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.DigitDP.DigitDP_DigitSumMod3",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "B",
             "request": "launch",
             "mainClass": "B",

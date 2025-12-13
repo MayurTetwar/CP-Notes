@@ -1,11 +1,11 @@
-package SegmentTree;
+package Tree.SegmentTree;
 
-public class RSQOverRange {
+public class RangeSumWithRangeUpdate {
     private final long[] tree;
     private final long[] lazyAdd;
     private final int n;
 
-    public RSQOverRange(int size) {
+    public RangeSumWithRangeUpdate(int size) {
         this.n = size;
         this.tree = new long[4 * n];
         this.lazyAdd = new long[4 * n];
@@ -73,7 +73,7 @@ public class RSQOverRange {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
-        RSQOverRange st = new RSQOverRange(arr.length);
+        RangeSumWithRangeUpdate st = new RangeSumWithRangeUpdate(arr.length);
         st.build(arr, 1, 0, arr.length - 1);
 
         System.out.println(st.queryRange(0, 4)); // 15

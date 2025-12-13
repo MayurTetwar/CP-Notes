@@ -1,4 +1,5 @@
-package DynamicPrograming;
+package DynamicPrograming.DigitDP;
+
 import java.util.*;
 
 public class DigitDP_AllOdd {
@@ -27,13 +28,11 @@ public class DigitDP_AllOdd {
         int limit = (tight == 1) ? num.charAt(pos) - '0' : 9;
         long res = 0;
 
-        // Option 1: skip this digit (leading zeros)
-        if (started == 0) res += count(pos + 1, 0, 0);
-
-        // Option 2: place odd digits
-        for (int dig=1;dig<=limit;dig+=2) {
+        for (int dig=0;dig<=limit;dig++) {
             int newTight = (tight == 1 && dig == limit) ? 1 : 0;
-            res += count(pos + 1, newTight, 1);
+            int newStarted = (started == 0 && dig==0) ? 0 : 1;
+            if (newStarted == 1 && dig % 2 == 0) continue;  
+            res += count(pos + 1, newTight, newStarted);
         }
 
         return dp[pos][tight][started] = res;
