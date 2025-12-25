@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MedianFinder",
+            "request": "launch",
+            "mainClass": "Tree.MergeSortTree.MedianFinder",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "Practice",
             "request": "launch",
             "mainClass": "Practice",

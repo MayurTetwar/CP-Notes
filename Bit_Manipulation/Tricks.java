@@ -77,4 +77,17 @@ public class Tricks {
     let a b are 2 numbers
     if a&b == 0 then a^b = a+b
     */
+
+    // 13. Expression solution
+    /*
+    like (a and b) xor (a or b) -> find minimum value from array.
+    sol:- find it's boolean table.
+    for above expression is is just normal xor of both number 
+    a b (a and b) xor (a or b)
+    0 0            0
+    0 1            1
+    1 0            1
+    1 1            0
+    Now Solve.......
+    */
 }

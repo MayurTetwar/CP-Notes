@@ -5,7 +5,6 @@
 115. Distinct Subsequences
 698. Partition to K Equal Sum Subsets
 718. Maximum Length of Repeated Subarray
-486. Predict the Winner
 2398. Maximum Number of Robots Within Budget
 207. Course Schedule
 1239. Maximum Length of a Concatenated String with Unique Characters
@@ -106,6 +105,16 @@ a map? Is it constructive? Can I use two pointers?"
  
 You will have an arsenal. Now, go build it.
 
+-------------------------------------------------------------------------------------
+
+📌 Nim & Grundy — 5-Line Cheat Sheet
+1. Two-player coin-removal game with independent piles ⇒ Nim game
+2. Grundy number = Nim value of a pile
+3. Remove 1..A[i] ⇒ Grundy = A[i]
+4. Remove 1..X ⇒ Grundy = A[i] % (X+1)
+5. XOR all Grundy values
+    a. XOR = 0 → Lose
+    b. XOR ≠ 0 → Win
 -------------------------------------------------------------------------------------
 
 /* To Find Diameter of tree */ 
