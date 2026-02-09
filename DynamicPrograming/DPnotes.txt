@@ -2,6 +2,10 @@
 // Always remember //
 IMP :- Always create class array (memo) (ex. Integer[][][] memo)
 IMP2 :- For subset problem , Find all posiible sum(can be made) using boolean array for each number (if possible).
+IMP3 :- To find maximum score then minimum is (same for min)
+        1. int neg = -(int)1e9 
+        2. long neg = -(long)1e17;
+
 1. if array is size of 100 then 2d-dp and for loop allow which leads to n^3(Accepted)
 2. if array is size of 1000 then :-
     a.2d-dp without for loop (means 0-1 napsack) (n^2 Accepted)

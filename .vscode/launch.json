@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AllpermutaionOfArray",
+            "request": "launch",
+            "mainClass": "Recursion.AllpermutaionOfArray",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "AllCombinationOfArray",
+            "request": "launch",
+            "mainClass": "Recursion.AllCombinationOfArray",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "MedianFinder",
             "request": "launch",
             "mainClass": "Tree.MergeSortTree.MedianFinder",

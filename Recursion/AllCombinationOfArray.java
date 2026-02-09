@@ -1,5 +1,4 @@
 package Recursion;
-import java.util.*;
 
 public class AllCombinationOfArray {
 
@@ -12,7 +11,7 @@ public class AllCombinationOfArray {
         getCombinationOfArray(arr, i+1, str);
     }
     public static void main(String[] args) {
-        int[] arr={5,-3,5};
+        int[] arr={1,2,3,4};
         getCombinationOfArray(arr, 0,"");
     }
 
