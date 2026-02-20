@@ -64,7 +64,12 @@ public class Tricks {
         return Integer.numberOfTrailingZeros(n);
     }
 
-    // 11. Differnt type of bit set 
+    // 11. Get Binary String
+    public String getBinary(int n){
+        return Integer.toBinaryString(n);
+    }
+
+    // 12. Differnt type of bit set 
     /*
     If you want the actual bit value (0/1) → use (num >> i) & 1.
     (Best for trie navigation where you need index 0 or 1.)
@@ -72,13 +77,13 @@ public class Tricks {
     (Best for boolean conditions.)
      */
 
-    // 12. AND trick
+    // 13. AND trick
     /*
     let a b are 2 numbers
     if a&b == 0 then a^b = a+b
     */
 
-    // 13. Expression solution
+    // 14. Expression solution
     /*
     like (a and b) xor (a or b) -> find minimum value from array.
     sol:- find it's boolean table.

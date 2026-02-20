@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LCA",
+            "request": "launch",
+            "mainClass": "Tree.BinaryLifting.LCA",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "AllpermutaionOfArray",
             "request": "launch",
             "mainClass": "Recursion.AllpermutaionOfArray",

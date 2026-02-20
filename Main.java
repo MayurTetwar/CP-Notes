@@ -6,16 +6,16 @@ public class Main {
     int intmax=(int)1e9;
     long longmin=-(long)1e17;
     long longmax=(long)1e17;
-    int[]spf;
 
     // Writing your solution here. -------------------------------------
     // 1) FIRST READ QUESTION PROPERLY 2 TIMES
     // 2) CHECK FOR LONG
+
     public void solve(MyScanner sc){
         int n=sc.nextInt();
         
-
-        // print("------------------------");
+        
+        
     }
 
     public void brute(MyScanner sc){
@@ -74,6 +74,7 @@ public class Main {
         return list;
     }
     // Use when multiple times requirements of Prime factors (nlogn)
+    int[]spf;
     public void buildSPF(int MAX) {
         spf=new int[MAX+1];
         for (int i = 2; i <= MAX; i++) spf[i] = i;
@@ -134,7 +135,7 @@ public class Main {
         ch = Character.toLowerCase(ch);
         return ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u';
     }
-    public int[] countFrequency(int[] arr) {
+    public int[] getFrequency(int[] arr) {
         int maxValue=0;
         for(int num:arr)maxValue = Math.max(maxValue,num);
         int[] freq = new int[maxValue + 1];  
