@@ -1,3 +1,5 @@
+import java.io.BufferedOutputStream;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Example {
@@ -13,8 +15,8 @@ public class Example {
             this.right = right;
         }
     }
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         HashMap<Integer,Integer> map=new HashMap<>();
         TreeMap<Integer,Integer> tm=new TreeMap<>();
         String str="Mayur";
@@ -29,9 +31,10 @@ public class Example {
         int[] arr=new int[10];
         char ch='a';
         BitSet bs = new BitSet(10); 
-         
         
         
+        out.print(ch);
         
     }
+        public static PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
 }

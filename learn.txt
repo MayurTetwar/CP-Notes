@@ -116,6 +116,14 @@ long max = (long)1e17;
 
 -------------------------------------------------------------------------------------
 
+/* for comparing double values, used this */
+static boolean equals(double a, double b) {
+    double EPS = 1e-9;
+    return Math.abs(a - b) < EPS;
+}
+
+-------------------------------------------------------------------------------------
+
 📌 Nim & Grundy — 5-Line Cheat Sheet
 1. Two-player coin-removal game with independent piles ⇒ Nim game
 2. Grundy number = Nim value of a pile

@@ -14,25 +14,21 @@ public class Main {
     public void solve(MyScanner sc){
         int n=sc.nextInt();
         
-        
-        
+
     }
-
     public void brute(MyScanner sc){
-        int n=sc.nextInt();
-
-        // print("------------------------");
+        // print("-------------------");
     }
     public static void main(String[] args) throws java.lang.Exception {
 
         MyScanner sc = new MyScanner();
  
-        int test = sc.nextInt();
-        while (test-->0) {
-            (new Main()).solve(sc);
-        }
+        // int test = sc.nextInt();
+        // while (test-->0) {
+        //     (new Main()).solve(sc);
+        // }
        
-        // (new Main()).solve(sc);
+        (new Main()).solve(sc);
 
         /* --- Bruteforce Testing --- */
         // brute(sc);
@@ -62,7 +58,7 @@ public class Main {
         return gcd(b % a, a);
     }
     // TC:- O(nloglogn)
-    public List<Integer> getPrime(int n) {
+    public List<Integer> getPrimeUpToN(int n) {
         List<Integer> list = new ArrayList<>();
         boolean[] visi = new boolean[n + 1];
         for (int i = 2; i <= n; i++) {
@@ -73,7 +69,7 @@ public class Main {
         }
         return list;
     }
-    // Use when multiple times requirements of Prime factors (nlogn)
+    // Use when multiple times requirements of Prime factors (MAXlog(MAX))
     int[]spf;
     public void buildSPF(int MAX) {
         spf=new int[MAX+1];
@@ -86,6 +82,7 @@ public class Main {
             }
         }
     }
+    // TC:- log(num)
     public List<Integer> getPrimeFactors(int num) {
         List<Integer> factors = new ArrayList<>();
         while (num > 1) {
@@ -96,8 +93,8 @@ public class Main {
         }
         return factors;
     }
-    // Use when only single number prime numbers requied (sqrt(n) up to 10^9) TC:- O(√n)
-    public List<Integer> getPrimeFactorsSingleNumber(int n){
+    // Only for single number TC:- O(√n)
+    public List<Integer> getPrimeFactorsForSingleNumber(int n){
         List<Integer> fact=new ArrayList<>();
         for(int i=2;i*i<=n;i++){
             while(n%i==0){

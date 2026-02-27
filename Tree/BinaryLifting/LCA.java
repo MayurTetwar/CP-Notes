@@ -115,7 +115,10 @@ public class LCA {
                 }
             }
         }
-
+        /*
+        2^j = 2^(j-1) + 2^(j-1)
+        So: 4th ancestor = 2nd ancestor of 2nd ancestor
+        */
 
         // Read number of queries
         int Q = sc.nextInt();
