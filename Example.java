@@ -1,5 +1,3 @@
-import java.io.BufferedOutputStream;
-import java.io.PrintWriter;
 import java.util.*;
 
 public class Example {
@@ -33,8 +31,6 @@ public class Example {
         BitSet bs = new BitSet(10); 
         
         
-        out.print(ch);
         
     }
-        public static PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
 }

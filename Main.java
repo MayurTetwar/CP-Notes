@@ -10,11 +10,11 @@ public class Main {
     // Writing your solution here. -------------------------------------
     // 1) FIRST READ QUESTION PROPERLY 2 TIMES
     // 2) CHECK FOR LONG
-
     public void solve(MyScanner sc){
         int n=sc.nextInt();
+       
         
-
+        //print("------------------------");
     }
     public void brute(MyScanner sc){
         // print("-------------------");
@@ -23,12 +23,12 @@ public class Main {
 
         MyScanner sc = new MyScanner();
  
-        // int test = sc.nextInt();
-        // while (test-->0) {
-        //     (new Main()).solve(sc);
-        // }
+        int test = sc.nextInt();
+        while (test-->0) {
+            (new Main()).solve(sc);
+        }
        
-        (new Main()).solve(sc);
+        // (new Main()).solve(sc);
 
         /* --- Bruteforce Testing --- */
         // brute(sc);
@@ -106,7 +106,7 @@ public class Main {
         return fact;
     }
     // TC:- O(√n)
-    public List<Integer> findDivisors(int x) {
+    public List<Integer> getDivisors(int x) {
         List<Integer> divisors = new ArrayList<>();
         for (int i = 1; i * i <= x; i++) {
             if (x % i == 0) {
@@ -127,6 +127,9 @@ public class Main {
             exponent >>= 1;  
         }
         return result;
+    }
+    public long modInverse(long n,long mod) {
+        return powerMod(n, mod - 2,mod);
     }
     public boolean isVowel(char ch){
         ch = Character.toLowerCase(ch);

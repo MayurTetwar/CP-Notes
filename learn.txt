@@ -147,6 +147,11 @@ Maximum Depth Of recursive stack in java is 19500~.
 
 -------------------------------------------------------------------------------------
 
+/* To calculate Inverse -> (n)^(-1)*/
+return powerMod(n,mod-2,mod);
+
+-------------------------------------------------------------------------------------
+
 /* Use follwing if you required to substruct values from long with mod. */
 rem = (rem - dp[neg] + mod) % mod
 
