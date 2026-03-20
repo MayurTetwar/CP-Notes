@@ -1,4 +1,4 @@
-package Tree;
+package Tree.STonTree;
 
 // file: EulerTour.java
 

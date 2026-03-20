@@ -1,10 +1,10 @@
 package Tree.SegmentTree;
 
-public class RangeSum {
+public class PointU_RangeQuery {
     private static long[] tree;
     private static int n;
 
-    public RangeSum(int[] arr) {
+    public PointU_RangeQuery(int[] arr) {
         n = arr.length;
         tree = new long[4 * n];
         build(arr, 1, 0, n - 1);
@@ -59,7 +59,7 @@ public class RangeSum {
 
     private void update(int node, int start, int end, int idx, int val) {
         if (start == end) {
-            tree[node] = val;
+            tree[node] += val;
         } else {
             int mid = (start + end) / 2;
             if (idx <= mid) {
@@ -70,29 +70,15 @@ public class RangeSum {
             tree[node] = tree[2 * node] + tree[2 * node + 1];
         }
     }
-    /*
-    To update arr[idx] = val:
-        1. Go down the tree to the leaf node representing idx
-        2. Update its value
-        3. On the way back up, recalc parent nodes as sum of children
-    */
 
     // Example usage
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7, 9, 11};
-        RangeSum st = new RangeSum(arr);
+        PointU_RangeQuery st = new PointU_RangeQuery(arr);
 
         System.out.println(st.query(1, 3)); // sum from index 1 to 3
-        st.update(1, 10);               // update arr[1] = 10
+        st.update(1, 10);               // update arr[1] += 10
         System.out.println(st.query(1, 3)); // sum from index 1 to 3 after update
     }
-    /*
-                         (0,5)=36
-                        /        \
-                 (0,2)=9          (3,5)=27
-                /      \           /      \
-          (0,1)=4     (2,2)=5   (3,4)=16  (5,5)=11
-         /      \               /      \
-    (0,0)=1     (1,1)=3      (3,3)=7   (4,4)=9
-    */
+               
 }

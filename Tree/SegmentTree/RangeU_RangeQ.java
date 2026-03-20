@@ -1,6 +1,6 @@
 package Tree.SegmentTree;
 
-public class LazySegmentTree {
+public class RangeU_RangeQ {
 
     static class SegmentTree {
 

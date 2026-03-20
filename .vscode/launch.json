@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NodeU_SubtreeQuery",
+            "request": "launch",
+            "mainClass": "Tree.STonTree.NodeU_SubtreeQuery",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "PointU_RangeQuery",
+            "request": "launch",
+            "mainClass": "Tree.SegmentTree.PointU_RangeQuery",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "LCA",
             "request": "launch",
             "mainClass": "Tree.BinaryLifting.LCA",

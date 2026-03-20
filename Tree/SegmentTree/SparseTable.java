@@ -1,8 +1,6 @@
 package Tree.SegmentTree;
 
-import java.util.*;
-
-public class MinMaxSparseTable {
+public class SparseTable {
 
     static int[][] minST;   // sparse table for min
     static int[][] maxST;   // sparse table for max

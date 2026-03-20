@@ -1,7 +1,7 @@
 package Tree.SegmentTree;
 import java.util.Scanner;
 
-public class STwithSetRangeSetQuery {
+public class RangeSet_RangeQuery {
 
     static long[] tree;
     static long[] lazy;
