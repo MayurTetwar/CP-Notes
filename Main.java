@@ -13,7 +13,7 @@ public class Main {
     public void solve(MyScanner sc){
         int n=sc.nextInt();
         
-        
+
         //print("------------------------");
     }
    

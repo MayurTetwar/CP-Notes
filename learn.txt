@@ -12,6 +12,9 @@
 3381. Maximum Subarray Sum With Length Divisible by K
 2940. Find Building Where Alice and Bob Can Meet
 2975. Maximum Square Area by Removing Fences From a Field (Array,HashSet,Enumeration)
+132. Palindrome Partitioning II
+312. Burst Balloons
+
 
 
 -------------------------------------------------------------------------------------

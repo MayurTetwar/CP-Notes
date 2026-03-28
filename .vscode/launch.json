@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ShutdownPC",
+            "request": "launch",
+            "mainClass": "ShutdownPC",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "MaxOccurrenceSegmentTree",
+            "request": "launch",
+            "mainClass": "Tree.SegmentTree.MaxOccurrenceSegmentTree",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "NodeU_SubtreeQuery",
             "request": "launch",
             "mainClass": "Tree.STonTree.NodeU_SubtreeQuery",

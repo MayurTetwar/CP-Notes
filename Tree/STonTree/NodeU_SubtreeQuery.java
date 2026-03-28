@@ -8,7 +8,7 @@ public class NodeU_SubtreeQuery {
     static int[] values;
 
     static int[] flat;
-    static int[] in, outa;
+    static int[] in, out;
     static int timer = 0;
 
     static long[] seg;
@@ -23,7 +23,7 @@ public class NodeU_SubtreeQuery {
             dfs(child, node);
         }
 
-        outa[node] = timer - 1;
+        out[node] = timer - 1;
     }
 
     static void build(int node, int st, int end) {
@@ -72,10 +72,11 @@ public class NodeU_SubtreeQuery {
         n=sc.nextInt();
         int q=sc.nextInt();
         int[] arr=new int[n];
+        tree=new ArrayList<>();
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-        outa=new int[n];
+        out=new int[n];
         in=new int[n];
         seg=new long[n*4];
         flat=new int[n];
@@ -99,13 +100,8 @@ public class NodeU_SubtreeQuery {
                 update(1,0, n-1, in[idx], val);
             }else{
                 int s=sc.nextInt()-1;
-                System.out.println(query(1, 0, n-1, in[s], outa[s]));
+                System.out.println(query(1, 0, n-1, in[s], out[s]));
             }
         }
-    }
-
-    static void addEdge(int u, int v) {
-        tree.get(u).add(v);
-        tree.get(v).add(u);
     }
 }
