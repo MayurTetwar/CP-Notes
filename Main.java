@@ -13,7 +13,7 @@ public class Main {
     public void solve(MyScanner sc){
         int n=sc.nextInt();
         
-
+        
         //print("------------------------");
     }
    
@@ -24,12 +24,12 @@ public class Main {
 
         MyScanner sc = new MyScanner();
  
-        // int test = sc.nextInt();
-        // while (test-->0) {
-        //     (new Main()).solve(sc);
-        // }
+        int test = sc.nextInt();
+        while (test-->0) {
+            (new Main()).solve(sc);
+        }
        
-        (new Main()).solve(sc);
+        // (new Main()).solve(sc);
 
         /* --- Bruteforce Testing --- */
         // brute(sc);
