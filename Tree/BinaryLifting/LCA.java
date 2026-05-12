@@ -10,6 +10,7 @@ import java.util.*;
 
 public class LCA {
 
+    
     static int N;                 // Number of nodes
     static int LOG;               // Max power of 2 needed
     static List<Integer>[] tree;  // Adjacency list for tree
@@ -33,7 +34,6 @@ public class LCA {
             }
         }
     }
-
     // ---------------- LCA FUNCTION ----------------
     static int lca(int a, int b) {
 

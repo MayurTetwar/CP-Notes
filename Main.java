@@ -22,6 +22,7 @@ public class Main {
     }
     public static void main(String[] args) throws java.lang.Exception {
 
+        
         MyScanner sc = new MyScanner();
  
         int test = sc.nextInt();
@@ -89,8 +90,8 @@ public class Main {
         while (num > 1) {
             int p = spf[num];
             factors.add(p);   
-            num /= p;         // Multiple prime number
-            // while(num % p == 0) num/=p;  // Unique prime number
+            // num /= p;         // Multiple prime number
+            while(num % p == 0) num/=p;  // Unique prime number
         }
         return factors;
     }

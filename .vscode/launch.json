@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SubtreeU_SubtreeQuery",
+            "request": "launch",
+            "mainClass": "Tree.STonTree.SubtreeU_SubtreeQuery",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "ShutdownPC",
             "request": "launch",
             "mainClass": "ShutdownPC",
