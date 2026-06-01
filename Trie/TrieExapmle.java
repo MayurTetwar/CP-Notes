@@ -31,7 +31,7 @@ class TrieExapmle {
         public Trie() {
             this.next = new Trie[10]; // Assuming digits 0-9
             this.isEnd = false;
-            this.count = 0;
+            this.count= 1000000;
         }
     }
 

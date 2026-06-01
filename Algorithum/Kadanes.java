@@ -13,9 +13,7 @@ class Kadnes{
                 max=Math.max(max,curr);
                 if(curr<0){
                     curr=0;
-                    System.out.println("Yes");
                 }
-                System.out.println(max);
             }
             return max;
         }

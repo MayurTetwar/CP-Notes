@@ -21,6 +21,7 @@ IMP3 :- To find maximum score then minimum is (same for min)
     See problem :- 1. 1000. Minimum Cost to Merge Stones
                    2. 312. Burst Balloons
 
+
 --------------------------------------------------------------------------------------
 
 // when to use //
