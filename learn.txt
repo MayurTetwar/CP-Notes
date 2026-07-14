@@ -12,9 +12,11 @@
 3381. Maximum Subarray Sum With Length Divisible by K
 2940. Find Building Where Alice and Bob Can Meet
 2975. Maximum Square Area by Removing Fences From a Field (Array,HashSet,Enumeration)
-132. Palindrome Partitioning II
-312. Burst Balloons
+132. Palindrome Partitioning II (DP)
+312. Burst Balloons (DP)
 629. K Inverse Pairs Array
+3534. Path Existence Queries in a Graph II (Binary lifting)
+3336. Find the Number of Subsequences With Equal GCD (DP with 2 parallel subsequance)
 
 
 -------------------------------------------------------------------------------------
