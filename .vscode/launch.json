@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BFS",
+            "request": "launch",
+            "mainClass": "Graph.BFS",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "UpAndLowerBond",
+            "request": "launch",
+            "mainClass": "Searching.UpAndLowerBond",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "SubtreeU_SubtreeQuery",
             "request": "launch",
             "mainClass": "Tree.STonTree.SubtreeU_SubtreeQuery",

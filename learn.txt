@@ -17,6 +17,8 @@
 629. K Inverse Pairs Array
 3534. Path Existence Queries in a Graph II (Binary lifting)
 3336. Find the Number of Subsequences With Equal GCD (DP with 2 parallel subsequance)
+3286. Find a Safe Walk Through a Grid (PQ)
+3970. Shortest Path With At Most K Consecutive Identical Characters (Graph) Date:- 25/7/26
 
 
 -------------------------------------------------------------------------------------
