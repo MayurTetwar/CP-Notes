@@ -19,6 +19,7 @@
 3336. Find the Number of Subsequences With Equal GCD (DP with 2 parallel subsequance)
 3286. Find a Safe Walk Through a Grid (PQ)
 3970. Shortest Path With At Most K Consecutive Identical Characters (Graph) Date:- 25/7/26
+1563. Stone Game V (Partition DP)
 
 
 -------------------------------------------------------------------------------------
@@ -43,6 +44,18 @@ int min = -(int)1e9;
 int max = (int)1e9;
 long min = -(long)1e17;
 long max = (long)1e17;
+
+-------------------------------------------------------------------------------------
+
+// Heap Or PriorityQueue
+1. Min Heap: The smallest element is always at the root; every parent ≤ its children. 
+   Used when you need the minimum element quickly.
+2. Max Heap: The largest element is always at the root; every parent ≥ its children. 
+   Used when you need the maximum element quickly.
+3. Insertion: Add the new element at the end, 
+   then heapify up by swapping it with its parent until the heap property is restored. → O(log n)
+4. Deletion: Remove the root, move the last element to the root, 
+   then heapify down by swapping with the appropriate child until the heap property is restored. → O(log n)
 
 -------------------------------------------------------------------------------------
 

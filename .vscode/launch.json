@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FloydWarshall",
+            "request": "launch",
+            "mainClass": "Graph.FloydWarshall",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "BFS",
             "request": "launch",
             "mainClass": "Graph.BFS",

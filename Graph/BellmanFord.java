@@ -1,6 +1,8 @@
 package Graph;
 import java.util.*;
 
+// single-source shortest path algorithm to find the shortest from 1 node to all nodes 
+// TC:- O(V*N) but can handle the negative edge also.....
 class BellmanFord {
     static class Edge {
         int u, v, w;

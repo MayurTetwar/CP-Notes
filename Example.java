@@ -31,7 +31,9 @@ public class Example {
         BitSet bs = new BitSet(10); 
         Integer num=12345;
        
-       
+        
+
+
         
     }
 }
