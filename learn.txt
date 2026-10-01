@@ -107,13 +107,9 @@ rem = (rem - dp[neg] + mod) % mod
 
 -------------------------------------------------------------------------------------
 
-/* If you see a+b=x and a*b=y then find and b then used :- */
-    if((x*x)-4*y<0){
-        print("No");
-    }else{
-        print("Yes);
-        // a-b = Math.sqrt(x*x-4*y);
-    }
+// Factors Truth 
+Each perfect square having only odd number of factors and other are have even number of factors.
+
 --------------------------------------------------------------------------------------
 
 /* Which Tree is Used ?? */

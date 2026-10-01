@@ -5,6 +5,7 @@ IMP2 :- For subset problem , Find all posiible sum(can be made) using boolean ar
 IMP3 :- To find maximum score then minimum is (same for min)
         1. int neg = -(int)1e9 
         2. long neg = -(long)1e17;
+IMP4 :- After writing all the base condition, write the memoization (if) condition.
 
 1. if array is size of 100 then 2d-dp and for loop allow which leads to n^3(Accepted)
 2. if array is size of 1000 then :-
