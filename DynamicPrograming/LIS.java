@@ -20,6 +20,7 @@ public class LIS{
             if (pos == tails.size()) tails.add(x);
             else tails.set(pos, x);
         }
+        System.out.println(tails);
         return tails.size();
     }
 }

@@ -59,6 +59,14 @@ long max = (long)1e17;
 
 -------------------------------------------------------------------------------------
 
+/* Function Graph OR outdegree ≤ 1 Graph */
+If a directed graph has outdegree ≤ 1 for every vertex, it has a very special structure. 
+This is often called a functional graph when every vertex has exactly one outgoing edge.
+1. Exactly one directed cycle or zero 
+2. Some trees feeding into that cycle
+
+-------------------------------------------------------------------------------------
+
 /* DP gussing from 2 sorting confucion */
    Whenever a problem gives you two quantities (Quantity vs. Price, Weight vs. Value, Pages vs. Price):
    1. Fractions allowed = Sort by Ratio (Greedy).
@@ -92,8 +100,7 @@ static boolean equals(double a, double b) {
 
 -------------------------------------------------------------------------------------
 
-/* STACK LIMIT*/
-Maximum Depth Of recursive stack in java is 19500~.
+/* the maximum numbers of divisior upto 10^5 is 128. so you can use TC upto n*countofDiv(n) */
 
 -------------------------------------------------------------------------------------
 

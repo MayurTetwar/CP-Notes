@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LIS",
+            "request": "launch",
+            "mainClass": "DynamicPrograming.LIS",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Juspay",
+            "request": "launch",
+            "mainClass": "Juspay",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "FloydWarshall",
             "request": "launch",
             "mainClass": "Graph.FloydWarshall",
