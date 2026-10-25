@@ -1,3 +1,4 @@
+package Design;
 import java.util.*;
 
 // Tree-Space Algorithum (Hackathon PartA)
@@ -164,7 +165,7 @@ Input Format
        OpCode 3 = Upgrade
 
 Example Walkthrough
-Input:
+Input 1:
     N = 7, M = 2, Q = 5
     Nodes = ["World", "Asia", "Africa", "China", "India", "SouthAfrica", "Egypt"]
     Queries = [
@@ -174,5 +175,35 @@ Input:
         "2 India 9", 
         "2 Asia 9"
         ]
-Final Output: true true true false true
+Output: true true true false true
+
+Input 2:
+7
+2
+8
+World
+Asia
+Africa
+China
+India
+SouthAfrica
+Egypt
+1 China 9
+1 India 9
+3 Asia 9
+2 India 9
+1 China 5
+2 Asia 9
+1 World 5
+1 Asia 7
+
+Output: 
+true
+true
+true
+false
+false
+true
+true
+false
 */

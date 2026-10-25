@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileSystem",
+            "request": "launch",
+            "mainClass": "Design.FileSystem",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "LIS",
             "request": "launch",
             "mainClass": "DynamicPrograming.LIS",
