@@ -5,11 +5,6 @@ import java.util.Arrays;
 /*
 To find all-pairs shortest paths (every node to every other node)
 Graph is dense or small (V ≤ ~400–500 typically, since V³ grows fast)
-
-Rule of thumb:
-Single source → Dijkstra (non-negative weights) or Bellman-Ford (negative weights allowed).
-All pairs, small dense graph → Floyd–Warshall.
-All pairs, large sparse graph → run Dijkstra from every vertex (O(V·E log V)), often cheaper than O(V³).
 */
 public class FloydWarshall {
     static final int INF = (int) 1e9;

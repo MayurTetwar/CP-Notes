@@ -12,8 +12,10 @@ public class Main {
     // 2) CHECK FOR LONG
     public void solve(MyScanner sc){
         int n=sc.nextInt();
+        
+        
 
-        //print("---------(---------------");
+        //print("------------------------");
     }
    
     public void brute(MyScanner sc){
