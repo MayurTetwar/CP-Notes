@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "JuspayB",
+            "request": "launch",
+            "mainClass": "Design.JuspayB",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "FileSystem",
             "request": "launch",
             "mainClass": "Design.FileSystem",

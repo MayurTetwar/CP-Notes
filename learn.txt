@@ -75,6 +75,13 @@ All pairs, large sparse graph → run Dijkstra from every vertex (O(V·E log V))
 
 -------------------------------------------------------------------------------------
 
+/* Rule to remember for any graph problem */
+Don’t ask “how many times can I visit this node?” Ask “how many distinct states exist, and how 
+many times can each one be improved or expanded?” For Dijkstra, each state is expanded once, so 
+the cost is about (number of transitions) × log.
+
+-------------------------------------------------------------------------------------
+
 /* DP gussing from 2 sorting confucion */
    Whenever a problem gives you two quantities (Quantity vs. Price, Weight vs. Value, Pages vs. Price):
    1. Fractions allowed = Sort by Ratio (Greedy).
