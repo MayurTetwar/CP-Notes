@@ -1,4 +1,4 @@
-package Design;
+package Design.LLD;
 import java.util.*;
 
 public class FileSystem {
