@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DocumentEditorClient",
+            "request": "launch",
+            "mainClass": "Design.LLD.Google_Docs.Good.DocumentEditorClient",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Good_DocumentEditorClient",
+            "request": "launch",
+            "mainClass": "Design.LLD.Google_Docs.Good_DocumentEditorClient",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
+            "name": "Bad_DocumentEditorClient",
+            "request": "launch",
+            "mainClass": "Design.LLD.Google_Docs.Bad_DocumentEditorClient",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "JuspayB",
             "request": "launch",
             "mainClass": "Design.JuspayB",
