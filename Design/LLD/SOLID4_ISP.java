@@ -60,7 +60,7 @@ class Cube implements ThreeDimensionalShape {
     }
 }
 
-public class ISP {
+public class SOLID4_ISP {
     public static void main(String[] args) {
         TwoDimensionalShape square    = new Square(5);
         TwoDimensionalShape rectangle = new Rectangle(4, 6);

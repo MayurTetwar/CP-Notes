@@ -65,7 +65,7 @@ class ShoppingCartStorage {
     }
 }
 
-public class SRP {
+public class SOLID1_SRP{
     public static void main(String[] args) {
         ShoppingCart cart = new ShoppingCart();
 

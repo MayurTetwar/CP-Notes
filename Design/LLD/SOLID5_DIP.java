@@ -40,7 +40,7 @@ class UserService {
     }
 }
 
-public class DIP {
+public class SOLID5_DIP {
     public static void main(String[] args) {
         MySQLDatabase mysql = new MySQLDatabase();
         MongoDBDatabase mongodb = new MongoDBDatabase();

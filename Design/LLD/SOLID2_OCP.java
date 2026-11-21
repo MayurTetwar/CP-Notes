@@ -78,7 +78,7 @@ class FilePersistence implements Persistence {
     }
 }
 
-public class OCP {
+public class SOLID2_OCP {
     public static void main(String[] args) {
         ShoppingCart cart = new ShoppingCart();
         cart.addProduct(new Product("Laptop", 50000));

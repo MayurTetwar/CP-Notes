@@ -1,7 +1,7 @@
 package Design.LLD;
 import java.util.*;
 
-public class FileSystem {
+public class _FileSystem {
     Node root;
     class Node{
         String name;
@@ -15,7 +15,7 @@ public class FileSystem {
             child=new HashMap<>();
         }
     }
-    FileSystem(){
+    _FileSystem(){
         root=new Node("/");
     }
     public Node mkdir(String path){
@@ -61,7 +61,7 @@ public class FileSystem {
             {"/"},
             {"/a/b/c/d"}
         };
-        FileSystem obj=new FileSystem();
+        _FileSystem obj=new _FileSystem();
         for(int i=0;i<op.length;i++){
             if(op[i].equals("FileSystem")){
             }else if(op[i].equals("ls")){

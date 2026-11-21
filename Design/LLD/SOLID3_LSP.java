@@ -96,7 +96,7 @@ class BankClient {
     }
 }
 
-public class LSP {
+public class SOLID3_LSP {
     public static void main(String[] args) {
         List<WithdrawableAccount> withdrawableAccounts = new ArrayList<>();
         withdrawableAccounts.add(new SavingAccount());
