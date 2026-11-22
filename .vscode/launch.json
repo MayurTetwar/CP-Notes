@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StrategyDesignPattern",
+            "request": "launch",
+            "mainClass": "Design.Design_Pattern.StrategyDesignPattern",
+            "projectName": "CP-Notes-main_1e27999e"
+        },
+        {
+            "type": "java",
             "name": "DocumentEditorClient",
             "request": "launch",
             "mainClass": "Design.LLD.Google_Docs.Good.DocumentEditorClient",
